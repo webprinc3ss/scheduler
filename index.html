@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Work Day Scheduler</title>
+</head>
+
+<body>
+
+    <header class="jumbotron">
+        <h1 class="display-3">Work Day Scheduler</h1>
+        <p class="lead">A simple calendar app for scheduling your work day</p>
+        <p id="currentDay" class="lead"></p>
+    </header>
+
+    <form>
+        <div class="container-fluid">
+            <!-- Timeblocks go here -->
+            <div class="row time-block" id="9:00">
+                <div class="col-2"></div>
+                <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
+                        id="timeNumber">9AM</span></div>
+                <div class="col-6 past" id="open9"><input id="event9"></input>
+                </div>
+                <div class="col saveBtn align-middle p-4" id="#button9"><i><span class="oi oi-lock-locked"
+                            id="button9"></span></i></div>
+                <div class="col-2"></div>
+            </div>
+            <div class="row time-block" id="10:00"></input>
+                <div class="col-2"></div>
+                <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
+                        id="timeNumber">10AM</span></div>
+                <div class="col-6 "><input id="event10"></input>
+                </div>
+                <div class="col saveBtn align-middle p-4"><i><span class="oi oi-lock-locked "></span></i></div>
+                <div class="col-2"></div>
+            </div>
+            <div class="row time-block" id="11:00">
+                <div class="col-2"></div>
+                <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
+                        id="timeNumber">11AM</span></div>
+                <div class="col-6 "><input id="event11"></input>
+                </div>
+                <div class="col saveBtn align-middle p-4"><i><span class="oi oi-lock-locked "></span></i></div>
+                <div class="col-2"></div>
+            </div>
+            <div class="row time-block" id="12:00">
+                <div class="col-2"></div>
+                <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
+                        id="timeNumber">12PM</span></div>
+                <div class="col-6 "><input id="event12"></input>
+                </div>
+                <div class="col saveBtn align-middle p-4"><i><span class="oi oi-lock-locked "></span></i></div>
+                <div class="col-2"></div>
+            </div>
+            <div class="row time-block" id="13:00">
+                <div class="col-2"></div>
+                <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
+                        id="timeNumber">1PM</span></div>
+                <div class="col-6 "><input id="event13"></input>
+                </div>
+                <div class="col saveBtn align-middle p-4"><i><span class="oi oi-lock-locked "></span></i></div>
+                <div class="col-2"></div>
+            </div>
+            <div class="row time-block" id="14:00">
+                <div class="col-2"></div>
+                <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
+                        id="timeNumber">2PM</span></div>
+                <div class="col-6 "><input id="event14"></input>
+                </div>
+                <div class="col saveBtn align-middle p-4"><i><span class="oi oi-lock-locked "></span></i></div>
+                <div class="col-2"></div>
+            </div>
+            <div class="row time-block" id="15:00">
+                <div class="col-2"></div>
+                <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
+                        id="timeNumber">3PM</span></div>
+                <div class="col-6 "><input id="event14"></input>
+                </div>
+                <div class="col saveBtn align-middle p-4"><i><span class="oi oi-lock-locked "></span></i></div>
+                <div class="col-2"></div>
+            </div>
+            <div class="row time-block" id="16:00">
+                <div class="col-2"></div>
+                <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
+                        id="timeNumber">4PM</span></div>
+                <div class="col-6 "><input id="event16"></input>
+                </div>
+                <div class="col saveBtn align-middle p-4"><i><span class="oi oi-lock-locked "></span></i></div>
+                <div class="col-2"></div>
+            </div>
+            <div class="row time-block" id="17:00">
+                <div class="col-2"></div>
+                <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
+                        id="timeNumber">5PM</span></div>
+                <div class="col-6 "><input id="event17"></input>
+                </div>
+                <div class="col saveBtn align-middle p-4"><i><span class="oi oi-lock-locked "></span></i></div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script>
+        // GIVEN I am using a daily planner to create a schedule
+        // WHEN I open the planner
+        // THEN the current day is displayed at the top of the calendar
+
+        $(document).ready(function () {
+            var now = moment().format("dddd, MMMM Do");
+            $("#currentDay").html(now);
+
+        });
+
+        // WHEN I scroll down
+        // THEN I am presented with time blocks for standard business hours  
+
+        // WHEN I view the time blocks for that day
+        // THEN each time block is color-coded to indicate whether it is in the past, present, or future
+
+       // Use the time for above: NOW
+       //Get the time from each time block, convert to real time and compare to current time.
+            //Convert Hours block to time
+            //Compare time to block (moment)
+            //Loop through each section of hours and fill in according to time
+            //Color code the sections accordingly
+
+        //Create array to store in local storage
+            //schedule = (time , task)
+            //store to array
+            //var storedSchedule = JSON.parse(localStorage.getItem('Schedule')) || [];
+
+        //Allow for input event / to be captured and stored
+            //We need to use JSON.stringify to turn the list from an array into a string
+
+        //Events populate list according to hour with events.
+
+        //Events can be edited by clicking on a time slot or the button next to it
+
+        //Events can be saved in it's time slot and persist on page desipite page reloading
+
+
+
+
+
+
+
+
+
+        //get the HOUR of time from timeHour
+        //get the HOUR of time from NOW
+        //Compare and color div
+        //Color .col-6 appropriately for past, present, future
+        //Loop thru #timeNumber div (time am/pm)
+
+        // WHEN I click into a time block
+            //lock transitions to open icon
+        $(document).ready(function () {
+            $("#open9").click(function () {
+                $("#event9").show();
+                $('#button9').removeClass('oi-lock-locked').addClass('oi-lock-unlocked');
+                //$("#button9 , .saveBtn").hide();
+            });
+            $(document).on("keypress", function (e) {
+                if (e.which == 13) {
+                    $("#event9").hide();
+                    $('#button9').removeClass('oi-lock-unlocked').addClass('oi-lock-locked');
+                }
+            });
+        });
+
+
+
+    
+// THEN I can enter an event
+
+
+// WHEN I click the save button for that time block
+    //lock transitions to closed icon
+// THEN the text for that event is saved in local storage
+// $(function(){
+//     $("#filter").click(function(){
+//         alert('clicked!');
+//     });
+// });
+
+// $(window).on("click", "#filter", function() {
+//     alert('clicked!');
+// });
+
+// WHEN I refresh the page
+// THEN the saved events persist
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // $(document).ready(function () {
+        //     $("#timeNumber").each(function () {
+        //     var timeOfDay = $("#timeNumber").text().trim()
+        //     alert("Straight from the div: " + timeOfDay);
+        //     });
+
+        //     var momentTime = moment("#timeNumber", LT)
+        // alert(momentTime)
+
+
+        //     alert("This is moment time:" + momentTime)
+
+        //     if (timeOfDay.includes("am") || parseInt(timeOfDay) != 12) {
+        //     var timeHour = timeOfDay.replace(/[^\d.]/g, '');
+        //     var timeHour = parseInt(timeOfDay) + 0;
+        //    alert("If it's a morning section:" + timeHour);
+
+        //    var hour = $(timeHour).setHour(timeHour);
+        //    alert("The time in the schedule is " + hour)
+
+        //     }
+
+        // });
+
+
+
+
+//         time = stringToDate(timeOfDay , )
+//             console.log(time)
+//             // Set the hour to 15
+
+//         // Set the hour to 15
+// var d = new Date();
+// d.setHours(15);
+
+//         stringToDate("17/9/2014","dd/MM/yyyy","/");
+// stringToDate("9/17/2014","mm/dd/yyyy","/")
+// stringToDate("9-17-2014","mm-dd-yyyy","-")
+
+// var n = d.toTimeString();
+
+
+        // $(document).ready(function () {
+
+        //     $('#timeNumber').each(function () {
+        //         $(".col-6").apendClass('.past');
+        //     });
+
+        //     $('#timeNumber').each(function () {
+        //         if ($(this).text().match('AM')) {
+        //             $(".col-6").apendClass('.future');
+        //         }
+        //     });
+
+
+
+
+            //$("#hour").each(function () {
+
+            //$("span.contains(AM)").("#col-6").css("color:", "blue")
+            //$("this.contains(PM)").apendClass(".future").removeClass(".past .present")
+            //})
+        //});
+        //$("some_selector:contains(some_text)").some_action("some_argument");
+
+
+
+            // $("#timeNumber").each(function () {
+            //     var timeOfDay = $("#timeNumber").text().trim()
+            //     alert("Straight from the div: " + timeOfDay);
+
+            //     
+            //     if ($(this).includes("am") || parseInt(timeOfDay) != 12) {
+            //         var timeHour = timeOfDay.replace(/[^\d.]/g, '');
+            //         var timeHour = parseInt(timeOfDay) + 0;
+            //         alert("If it's a morning section:" + timeHour);
+            //     } else {
+            //         var timeHour = timeOfDay.replace(/[^\d.]/g, '');
+            //         var timeHour = parseInt(timeofDay) + 12;
+            //         alert("If it's afternoon: " + timeHour);
+            //     }
+
+
+
+                // if (timeHour < now) {
+                //     $(".col-six").apendClass(".past").removeClass(".present .future")
+                //     alert("grey")
+                // } else if (timeHour = now) {
+                //     $(".col-six").apendClass(".present").removeClass(".past .future")
+                //     alert("green")
+                // } else {
+                //     $(".col-six").apendClass(".future").removeClass(".past .present")
+                //     alert("red")
+                // };
+
+            // });
+        // });
+
+//alert (time);
+  // convert to moment object at 5:00pm
+  //var now = moment(date, "L").set("hour", 17);
+  //alert (now);
+  //Compare time to moment
+  //if
+
+  // remove any old classes from element
+  //$(taskEl).removeClass("list-group-item-warning list-group-item-danger");
+
+  // apply new class if task is near/over due date
+  //if (moment().isAfter(time)) {
+    //$(taskEl).addClass("list-group-item-danger");
+
+ // else if (Math.abs(moment().diff(time, "days")) <= 2) {
+    //$(taskEl).addClass("list-group-item-warning");
+
+
+
+//var timeNumber = $("#timeNumber")
+//alert(timeNumber);
+//var myTime = new time('now, timeNumber');
+//alert(myTime);
+  // get date from task element
+
+
+
+
+
+
+
+
+
+
+
+            // var container = $("<div>").addClass("container-fluid");
+
+            // for (var i = 0; i < 9; i++) {
+            //     $("<div>").addClass("row, time-block").appendTo(container);
+            //     $("<div>").addClass("col-2").appendTo(container);
+            //     $("<div>").addClass("col, hour").appendTo(container);
+            //     $("<div>").addClass("col-6, future").appendTo(container);
+            //          $('<div>').addClass("card").appendTo("<div>").addClass("col-6, future");
+            //             $('<ul>').addClass("list-").appendTo("<div>").addClass("card");
+            //     $("<div>").addClass("col saveBtn align-middle p-4").appendTo(container);
+            //     $("<div>").addClass("col-2").appendTo(container);
+            // }
+
+
+
+// comment
+
+//Loop through each row - 9 for each hour of work
+            //for(i = 0; i < 9; i++) {
+            //$('row').append('<div id="div'+ i +'" />');
+
+
+            //}
+//label time column with hour
+
+
+
+    </script>
+</body>
+
+</html>
