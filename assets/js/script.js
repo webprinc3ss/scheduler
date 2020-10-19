@@ -6,11 +6,9 @@ $(document).ready(function () {
     var currentHour = moment().hour() //0-23
 
     $("span.timeNumber").each(function () {
-
         var timeNumber = $(this).html().trim()
-        //console.log(timeNumber);
         $(this).html(timeNumber);
-
+        moment().format();
         var blockHour = moment(timeNumber, "LT").hour()
 
         if (blockHour < currentHour) {
@@ -31,7 +29,7 @@ const Handlers = () => {
         var p = $(this).children("p")
         var textarea = $("<textarea class=\"event\">")
         textarea.val(p.text())
-        console.log(textarea.val())
+        //console.log(textarea.val())
         $(this).empty().append(textarea)
         textarea.trigger("focus")
         $(this).siblings(".saveBtn").find('.oi').removeClass('oi-lock-locked').addClass('oi-lock-unlocked');
@@ -50,20 +48,16 @@ const Handlers = () => {
     });
 
     $(".saveBtn").on("click", function (e) {
-
         $(this).find('.oi').removeClass("oi-lock-unlocked").addClass('oi-lock-locked')
         var p = $("<p>")
         var text = $(this).siblings().filter(".open").children()[0].textContent;
         var id = $(this).parent().attr("id");
         saveTasks(id, text)
-
     })
 }
 
 var loadTasks = function () {
-
     data = JSON.parse(localStorage.getItem("myTasks")) || [];
-
     data.forEach((element) => {
         var id = parseInt(element.id);
         //alert(row.task);
@@ -72,7 +66,7 @@ var loadTasks = function () {
 };
 
 var saveTasks = function (id, task) {
-    alert(id);
+    //alert(id);
     data.push({ id: id, task: task });
     localStorage.setItem("myTasks", JSON.stringify(data));
 };
