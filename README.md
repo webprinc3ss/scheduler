@@ -19,7 +19,7 @@ Some CSS was provided. However, I set up the rows using Bootstrap.
 
 # Website
 
-[Github Pages](https://webprinc3ss.github.io/scheduler/)
+[Github Pages](https://webprinc3ss.github.io/scheduler/index.html)
 <br>
 
 # Media
