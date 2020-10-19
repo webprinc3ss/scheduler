@@ -18,123 +18,115 @@
 </head>
 
 <body>
-
     <header class="jumbotron">
         <h1 class="display-3">Work Day Scheduler</h1>
         <p class="lead">A simple calendar app for scheduling your work day</p>
         <p id="currentDay" class="lead"></p>
     </header>
-
     <form id="myForm">
         <div class="container-fluid">
             <!-- Timeblocks go here -->
-            <div class="row time-block" id="9:00">
+            <div class="row time-block" id="9">
                 <div class="col-2"></div>
                 <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
                         class="timeNumber">09:00</span>
                 </div>
                 <div class="col-6 past open">
-                    <p></p>
+                    <p class="task" id="p1"></p>
                 </div>
-
                 <div class="col saveBtn align-middle p-4 "><i><span class="button oi oi-lock-locked"></span></i></div>
                 <div class="col-2"></div>
             </div>
-            <div class="row time-block" id="10:00">
+            <div class="row time-block" id="10">
                 <div class="col-2"></div>
                 <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
                         class="timeNumber">10:00</span>
                 </div>
                 <div class="col-6 past open">
-                    <p></p>
+                    <p class="task" id="p2"></p>
                 </div>
                 <div class="col saveBtn align-middle p-4 "><i><span class="button oi oi-lock-locked"></span></i></div>
                 <div class="col-2"></div>
             </div>
-            <div class="row time-block" id="11:00">
+            <div class="row time-block" id="11">
                 <div class="col-2"></div>
                 <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
                         class="timeNumber">11:00</span>
                 </div>
                 <div class="col-6 past open">
-                    <p></p>
+                    <p class="task" id="p3"></p>
                 </div>
-
                 <div class="col saveBtn align-middle p-4 "><i><span class="button oi oi-lock-locked"></span></i></div>
                 <div class="col-2"></div>
             </div>
-            <div class="row time-block" id="12:00">
+            <div class="row time-block" id="12">
                 <div class="col-2"></div>
                 <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
                         class="timeNumber">12:00</span>
                 </div>
                 <div class="col-6 past open">
-                    <p></p>
+                    <p class="task" id="p4"></p>
                 </div>
-
                 <div class="col saveBtn align-middle p-4 "><i><span class="button oi oi-lock-locked"></span></i></div>
                 <div class="col-2"></div>
             </div>
-            <div class="row time-block" id="13:00">
+            <div class="row time-block" id="13">
                 <div class="col-2"></div>
                 <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
                         class="timeNumber">13:00</span>
                 </div>
                 <div class="col-6 past open">
-                    <p></p>
+                    <p class="task" id="p5"></p>
                 </div>
-
                 <div class="col saveBtn align-middle p-4 "><i><span class="button oi oi-lock-locked"></span></i></div>
                 <div class="col-2"></div>
             </div>
-            <div class="row time-block" id="14:00">
+            <div class="row time-block" id="14">
                 <div class="col-2"></div>
                 <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
                         class="timeNumber">14:00</span>
                 </div>
                 <div class="col-6 past open">
-                    <p></p>
+                    <p class="task" id="p6"></p>
                 </div>
-
                 <div class="col saveBtn align-middle p-4 "><i><span class="button oi oi-lock-locked"></span></i></div>
                 <div class="col-2"></div>
             </div>
-            <div class="row time-block" id="15:00">
+            <div class="row time-block" id="15">
                 <div class="col-2"></div>
                 <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
                         class="timeNumber">15:00</span>
                 </div>
                 <div class="col-6 past open">
-                    <p></p>
+                    <p class="task" id="p7"></p>
                 </div>
                 <div class="col saveBtn align-middle p-4 "><i><span class="oi oi-lock-locked button"></span></i></div>
                 <div class="col-2"></div>
             </div>
-            <div class="row time-block" id="16:00">
+            <div class="row time-block" id="16">
                 <div class="col-2"></div>
                 <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
                         class="timeNumber">16:00</span>
                 </div>
                 <div class="col-6 past open">
-                    <p></p>
+                    <p class="task" id="p8"></p>
                 </div>
                 <div class="col saveBtn align-middle p-4 "><i><span class="oi oi-lock-locked button"></span></i></div>
                 <div class="col-2"></div>
             </div>
-            <div class="row time-block" id="17:00">
+            <div class="row time-block" id="17">
                 <div class="col-2"></div>
                 <div class="col hour d-flex justify-content-center align-items-center mx-auto"><span
                         class="timeNumber">17:00</span>
                 </div>
                 <div class="col-6 past open">
-                    <p></p>
+                    <p class="task" id="p9"></p>
                 </div>
                 <div class="col saveBtn align-middle p-4"><i><span class="oi oi-lock-locked  button"></span></i></div>
                 <div class="col-2"></div>
             </div>
         </div>
     </form>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -143,195 +135,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <script>
-        // GIVEN I am using a daily planner to create a schedule
-        // WHEN I open the planner
-        // THEN the current day is displayed at the top of the calendar
-
-        $(document).ready(function () {
-            var now = moment().format("dddd, MMMM Do");
-            $("#currentDay").html(now);
-
-        });
-
-        // WHEN I scroll down
-        // THEN I am presented with time blocks for standard business hours  
-
-        // WHEN I view the time blocks for that day
-        // THEN each time block is color-coded to indicate whether it is in the past, present, or future
-
-        // Use the time for above: NOW
-        //Get the time from each time block, convert to real time and compare to current time.
-
-        $(document).ready(function () {
-            var currentHour = moment().hour() //0-23
-
-            $("span.timeNumber").each(function () {
-                console.log(this)
-                var timeNumber = $(this).html().trim()
-                console.log(timeNumber);
-                $(this).html(timeNumber);
-
-                //Convert Hours block to time
-
-
-                var blockHour = moment(timeNumber, "LT").hour()
-                console.log(blockHour);
-
-                //Compare time to block (moment)
-
-                //Loop through each section of hours and fill in according to time
-                //Color code the sections accordingly
-
-                if (blockHour < currentHour) {
-                    $(this).parent().siblings(".col-6").addClass("past").removeClass("present future")
-
-                } else if (blockHour === currentHour) {
-
-                    $(this).parent().siblings(".col-6").addClass("present").removeClass("past future")
-
-                } else {
-                    $(this).parent().siblings(".col-6").addClass("future").removeClass("past present")
-                };
-
-            });
-        });
-
-        // $(document).ready(function () {
-
-
-        // });
-
-        var loadTasks = function () {
-            //     tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-
-            // loop over object properties
-            $.each(tasks, function (list, arr) {
-                //console.log(list, arr);
-                // then loop over sub-array
-                arr.forEach(function (task) {
-                    createTask(task.text list);
-                });
-            });
-        };
-
-        //Use JSON.stringify to turn the list from an array into a string
-        var saveTasks = function () {
-            localStorage.setItem("tasks", JSON.stringify(tasks));
-        };
-        console.log(saveTasks);
-
-
-        //Allow for input event / to be captured and stored
-        function saveSettings() {
-            $('#myform').saveStorage();
-            localStorage.time = $(currentHour).val();
-            localStorage.event = $('#event').val();
-        }
-
-
-
-
-        //Events populate list according to hour with events.
-
-        //Events can be edited by clicking on a time slot or the button next to it
-        //.parent().siblings(".col-6").
-
-        // WHEN I click into a time block
-        //lock transitions to open icon
-        $(document).ready(function () {
-            $(".open").click(function () {
-                var p = $(this).children("p")
-                var textarea = $("<textarea class=\"event\">")
-                textarea.val(p.text())
-                $(this).empty().append(textarea)
-                textarea.trigger("focus")
-
-
-                $(this).siblings(".saveBtn").find('.oi').removeClass('oi-lock-locked').addClass('oi-lock-unlocked');
-            });
-
-
-            $(document).on("blur", ".event", function (e) {
-                var p = $("<p>")
-                p.text($(this).val())
-                $(this).parent().empty().append(p)
-
-
-            });
-
-            $(".event").on("keypress", function (e) {
-                if (e.which == 13) {
-                    $(this).trigger("blur")
-                }
-
-            });
-            $(".saveBtn").on("click", function (e) {
-                $(this).find('.oi').removeClass("oi-lock-unlocked").addClass('oi-lock-locked')
-            })
-
-        });
-
-        //Events can be saved in it's time slot and persist on page desipite page reloading
-
-
-// THEN I can enter an event
-
-
-// WHEN I click the save button for that time block
-    //lock transitions to closed icon
-// THEN the text for that event is saved in local storage
-
-// WHEN I refresh the page
-// THEN the saved events persist
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // $(document).ready(function () {
-        //     $("#timeNumber").each(function () {
-        //     var timeOfDay = $("#timeNumber").text().trim()
-        //     alert("Straight from the div: " + timeOfDay);
-        //     });
-
-        //     var momentTime = moment("#timeNumber", LT)
-        // alert(momentTime)
-
-
-        //     alert("This is moment time:" + momentTime)
-
-        //     if (timeOfDay.includes("am") || parseInt(timeOfDay) != 12) {
-        //     var timeHour = timeOfDay.replace(/[^\d.]/g, '');
-        //     var timeHour = parseInt(timeOfDay) + 0;
-        //    alert("If it's a morning section:" + timeHour);
-
-        //    var hour = $(timeHour).setHour(timeHour);
-        //    alert("The time in the schedule is " + hour)
-
-        //     }
-
-        // });
-
-
-
-
-
-
-
-
-    </script>
+    <script src="assets/js/script.js?v=20201018"></script>
 </body>
 
 </html>
